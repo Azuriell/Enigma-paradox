@@ -4,7 +4,7 @@
 Enigma paradox est un jeu d'énigme en coopération.
 Le but est de résoudre le plus d'énigmes possible, pour déterminer quel sera le meilleur binome de joueur.
 
-![wireframe](http://hpics.li/372b636 "wireframe 1")
+![wireframe](https://www.hostingpics.net/viewer.php?id=58351120170511114718.jpg "wireframe 1")
 
 ## REGLES
 
