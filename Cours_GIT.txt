@@ -1,0 +1,23 @@
+Cours sur GIT
+
+Introduction : 
+	Comment garder l'historique des modifications de son code source ?
+	Comment travailler à plusieurs sur un même projet ?
+	Comment partager son travail dans le cadre du développement open source ?
+
+Développer par Linus Torvalds en 2005
+Principe de Github : décentralisé/multi branches/ rapide&performant/sécurisé/Logiciel libre GNU v2
+
+Commandes pour commit un fichier dans git : 
+- git status
+- git add .
+- git commit -m ""
+- git log/ git log --oneline
+- git checkout id_commit/ git chekout id_commit nom_du_fichier/git checkout master (dernière version de code)
+- git remote add origin url 
+- git push -u origin "branche(master)" (envoyer ses modifications sur github)
+- git pull origin master (récuper les sauvegarde sur github)
+- git diff HEAD
+- git branch my_feature (ajouter une branche)
+- git branch -d my_feature (supprimer la branche)
+
