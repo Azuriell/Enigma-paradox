@@ -4,7 +4,9 @@
 Enigma paradox est un jeu d'énigme en coopération.
 Vous incarnez Sherlock Holmes et Watson, votre but est de résoudre le plus d'énigmes possible, pour déterminer qui seront les meilleurs detectives.
 
-![wireframe](https://img4.hostingpics.net/thumbs/mini_547563enigma.jpg "wireframe 1")
+### Mise en situation du jeu :
+
+![wireframe](https://img4.hostingpics.net/thumbs/mini_801136201705151053120.jpg "wireframe 1")
 
 ## REGLES
 
