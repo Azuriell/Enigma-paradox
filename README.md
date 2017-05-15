@@ -11,7 +11,7 @@ Vous incarnez Sherlock Holmes et Watson, votre but est de résoudre le plus d'é
 ## REGLES
 
 * L'utilisateur doit créer une partie en local avec un ami et choisir son rôle (Sherlock Holmes et Watson), pour réssoudre des énigmes à deux.
-* Les joueurs sont sur 2 écrans différents pour ne pas visualiser l'écran de l'autre. 
+* Les joueurs sont sur 2 écrans différents pour ne pas visualiser l'écran de l'autre (cf l'image du dessus). 
 * Sherlock Holmes doit décrire ce qu'il voit et Watson agit en conséquence.
 * Watson doit donner des informations à Sherlock Holmes selon ce qu'il lui a dit précédement pour résoudre les énigmes.
 * L'équipe a un chrono pour résoudre le maximum d'énigme, que seul Sherlock Holmes voit.
