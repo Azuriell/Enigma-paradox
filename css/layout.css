@@ -11,7 +11,7 @@ body {
 .container {
     background:url("../images/header-background-indexed.png") repeat-x top left;
     border-top: 5px solid #000000;
-    height: 600px;
+    height: 245px;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -19,4 +19,7 @@ body {
 .content {
     margin:0 auto;
     width:900px;
+}
+.content img#cle {
+    margin-left: 65px;
 }

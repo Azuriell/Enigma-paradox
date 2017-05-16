@@ -6,42 +6,75 @@
 	<link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/menu.css" type="text/css" media="screen">
 </head>
-<body>
+<body onload="javascript:loadimg();">  
+	<!-- Début du header -->
 	<div class="container">
 		<div class="content">
 			<ul id="nav">
-				<li><a href="#" class="current">Clé 1</a>
+				<li>
+					<a onclick="visibilite(this.id)" id="first" class="current">Clé 1</a>
 					<ul class="subs">
-						<li><a href="#"><img src="images/sally-icon.jpg"></a></li>
+						<li><a onclick="visibilite()" id="first"><img src="images/preview-bomb-defusal-manual-v1r2-frv3-13.jpg"></a></li>
 					</ul>
 				</li>
-				<li><a href="#" class="current">Clé 2</a>
+				<li>
+					<a onclick="visibilite(this.id)" id="second" class="current">Clé 2</a>
 					<ul class="subs">
-						<li><a href="#"><img src="images/sally-icon.jpg"></a></li>
+						<li><a onclick="visibilite()" id="second"><img src="images/preview-bomb-defusal-manual-v1r2-frv3-13.jpg"></a></li>
 					</ul>
 				</li>
-				<li><a href="#" class="current">Clé 3</a>
+				<li>
+					<a onclick="visibilite(this.id)" id="third" class="current">Clé 3</a>
 					<ul class="subs">
-						<li><a href="#"><img src="images/sally-icon.jpg"></a></li>
+						<li><a onclick="visibilite()" id="third"><img src="images/preview-bomb-defusal-manual-v1r2-frv3-13.jpg"></a></li>
 					</ul>
 				</li>
-				<li><a href="#" class="current">Clé 4</a>
+				<li>
+					<a href="#" class="current">Clé 4</a>
 					<ul class="subs">
-						<li><a href="#"><img src="images/sally-icon.jpg"></a></li>
+						<li><a href="#"><img src="images/preview-bomb-defusal-manual-v1r2-frv3-13.jpg"></a></li>
 					</ul>
 				</li>
-				<li><a href="#" class="current">Clé 5</a>
+				<li>
+					<a href="#" class="current">Clé 5</a>
 					<ul class="subs">
-						<li><a href="#"><img src="images/sally-icon.jpg"></a></li>
+						<li><a href="#"><img src="images/preview-bomb-defusal-manual-v1r2-frv3-13.jpg"></a></li>
 					</ul>
 				</li>
-				<li><a href="#" class="current">Clé 6</a>
+				<li>
+					<a href="#" class="current">Clé 6</a>
 					<ul class="subs">
-						<li><a href="#"><img src="images/sally-icon.jpg"></a></li>
+						<li><a href="#"><img src="images/preview-bomb-defusal-manual-v1r2-frv3-13.jpg"></a></li>
 					</ul>
 				</li>
 			</ul>
 		</div>
 	</div>
+	<!-- Fin du header -->
+	<!-- Contenu de la page -->
+	<div class="content">
+		<img id="cle" src="" style="visibility : hidden;">
+	</div>
+	
+	<!-- Script js-->
+	<script>
+		var element = document.getElementById("cle");
+		function visibilite(id_button){
+			var image = document.getElementById('cle');
+			if(id_button == "first"){
+		  		image.src="images/preview-bomb-defusal-manual-v1r2-frv3-13 (1).jpg";
+			} else if(id_button == "second"){
+		  		image.src="images/preview-bomb-defusal-manual-v1r2-frv3-15.jpg";
+			} else if(id_button == "third"){
+		  		image.src="images/preview-bomb-defusal-manual-v1r2-frv3-11.jpg";
+			}
+
+		  	if(element.style.visibility == "hidden"){
+		    	element.style.visibility = "visible";
+			} else {
+				element.style.visibility = "hidden";
+			}
+		};
+	</script>
 </body>
 </html>
