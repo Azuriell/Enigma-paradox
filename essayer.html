@@ -6,11 +6,18 @@
   <title>essaie</title>
 </head>
 <body>
-  <button onclick="myFunction()">Click me</button>
+  <img hover="visibilite(this.id)" id="cle" src="">
+  
+  <!-- Script js-->
   <script>
-  function myFunction(){
-    element.style.visibility = none;
-  };
-  </script>
+    var element = document.getElementById("cle");
+    function visibilite(id_button){
+      var image = document.getElementById('cle');
+      if(id_button == "first"){
+          image.src="images/Rouage.png";
+      } else{
+          image.src="images/Rouage.gif";
+      }
+    </script>
 </body>
 </html>

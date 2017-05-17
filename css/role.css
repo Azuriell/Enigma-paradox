@@ -1,0 +1,9 @@
+button{
+	width: 75%;
+	padding: 5%;
+}
+
+button:hover{
+	width: 76%;
+	padding: 6%;
+}

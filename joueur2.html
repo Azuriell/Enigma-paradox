@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/menu.css" type="text/css" media="screen">
 </head>
-<body onload="javascript:loadimg();">  
+<body onload="javascript:visibilite();">  
 	<!-- Début du header -->
 	<div class="container">
 		<div class="content">
@@ -14,7 +14,7 @@
 				<li>
 					<a onclick="visibilite(this.id)" id="first" class="current">Clé 1</a>
 					<ul class="subs">
-						<li><a onclick="visibilite()" id="first"><img src="images/preview-bomb-defusal-manual-v1r2-frv3-13.jpg"></a></li>
+						<li><a onclick="visibilite()" id="first"><img src="images/Clé_2 (2).png"></a></li>
 					</ul>
 				</li>
 				<li>
@@ -52,9 +52,7 @@
 	</div>
 	<!-- Fin du header -->
 	<!-- Contenu de la page -->
-	<div class="content">
-		<img id="cle" src="" style="visibility : hidden;">
-	</div>
+	<img id="cle" src="" style="visibility : visible;">
 	
 	<!-- Script js-->
 	<script>
@@ -62,13 +60,12 @@
 		function visibilite(id_button){
 			var image = document.getElementById('cle');
 			if(id_button == "first"){
-		  		image.src="images/preview-bomb-defusal-manual-v1r2-frv3-13 (1).jpg";
+		  		image.src="images/Clé_2.png";
 			} else if(id_button == "second"){
 		  		image.src="images/preview-bomb-defusal-manual-v1r2-frv3-15.jpg";
 			} else if(id_button == "third"){
 		  		image.src="images/preview-bomb-defusal-manual-v1r2-frv3-11.jpg";
 			}
-
 		  	if(element.style.visibility == "hidden"){
 		    	element.style.visibility = "visible";
 			} else {

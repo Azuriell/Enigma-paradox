@@ -4,13 +4,39 @@
 	<title>Enigma paradox</title>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<style>
+		 #affichage, #image{
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    font-size: 50px;
+		    color: white;
+		    transform: translate(-50%,-50%);
+		    -ms-transform: translate(-50%,-50%);
+		}
+
+	</style>
 </head>
 <body>
 	<header>
-		
+		<!-- Chronomètre -->	
 	</header>
 	<section>
-	
+		<div id="overlay">
+		  	<img id="image" src="images/cadre.png">
+		</div>
+		<iframe id="affichage" src="" width="90%" height=""></iframe>
 	</section>
+	<script type="text/javascript">
+			var hauteur = document.getElementById("affichage");
+			hauteur.height = (window.innerHeight - 6)/1.2;
+			var num = Math.round(Math.random() * 1);
+			var enigme = document.getElementById('affichage');
+			if(num == 0 || num == 1){
+		  		enigme.src="joueur2.html";
+			} else {
+		  		enigme.src="";
+			}
+	</script>
 </body>
 </html>

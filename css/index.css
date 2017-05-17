@@ -1,0 +1,14 @@
+button {
+	width: 30%;
+}	
+button:hover{
+	width: 32%;
+}
+
+img{ 
+	width: 7%;
+	position: relative;
+	right: 9%;
+	z-index: 0;
+ }
+
