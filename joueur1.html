@@ -5,38 +5,85 @@
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 	<style>
-		 #affichage, #image{
+		 #affichage, #bouton{
 		    position: absolute;
 		    top: 50%;
 		    left: 50%;
 		    font-size: 50px;
-		    color: white;
 		    transform: translate(-50%,-50%);
 		    -ms-transform: translate(-50%,-50%);
 		}
-
+		#affichage{
+			z-index:0;
+		}
+		#bouton{
+		    z-index: 1;
+		}
+		#temps{
+			position: absolute;
+			top: 25px;
+			left: 25px;
+			color: white;
+		}
 	</style>
 </head>
 <body>
-	<header>
-		<!-- Chronomètre -->	
-	</header>
 	<section>
 		<div id="overlay">
+			<!-- Cadre en fond -->
 		  	<img id="image" src="images/cadre.png">
+			<!-- Bouton de lancement -->
+		  	<input type="button" id="bouton" value="Démarrer la partie !" onclick="startTimer(), crea()" style="visibility : visible;"/>
+
+			<!-- Chronomètre -->
+			<div id="temps" style="visibility : hidden;">Time :<span id="timer" ></span></div>
 		</div>
-		<iframe id="affichage" src="" width="90%" height=""></iframe>
+		<iframe id="affichage" style="visibility : hidden;" src="" width="90%" height=""></iframe>
 	</section>
 	<script type="text/javascript">
+		// Changement aléatoire de l'énigme au centre
+		function crea(){
 			var hauteur = document.getElementById("affichage");
 			hauteur.height = (window.innerHeight - 6)/1.2;
 			var num = Math.round(Math.random() * 1);
 			var enigme = document.getElementById('affichage');
 			if(num == 0 || num == 1){
-		  		enigme.src="joueur2.html";
+			  	enigme.src="joueur2.html";
 			} else {
-		  		enigme.src="";
+			  	enigme.src="";
 			}
+		}
+		// Chronomètre + button
+		document.getElementById('timer').innerHTML = 02 + ":" + 30;
+
+		var element1 = document.getElementById("bouton");
+		var element2 = document.getElementById("temps");
+		var element3 = document.getElementById("affichage");
+		function startTimer() {
+		    var presentTime = document.getElementById('timer').innerHTML;
+		    var timeArray = presentTime.split(/[:]+/);
+		    var m = timeArray[0];
+		    var s = checkSecond((timeArray[1] - 1));
+		    if(s==59){m=m-1}
+		    if(m<0){
+		    	stop.startTimer();
+		    	alert('timer completed')
+		    }
+
+		    document.getElementById('timer').innerHTML =
+		    	m + ":" + s;
+		    setTimeout(startTimer, 1000);
+		    // Changement propiété css du bouton et du timer
+		    element1.style.visibility = "hidden";
+		    element2.style.visibility = "visible";
+		    element3.style.visibility = "visible"; 
+		}
+
+		function checkSecond(sec) {
+		    if (sec  < 10 && sec >= 0) {sec = "0" + sec}; // ajotue zero devant les nombres < 10
+		    if (sec < 0) {sec = "59"};
+		    return sec;
+		}
 	</script>
 </body>
 </html>
