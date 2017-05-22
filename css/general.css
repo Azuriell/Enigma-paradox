@@ -15,6 +15,11 @@ p{
 	font-weight: bold;
 
 }
+div#txt{
+	font-size: 20px;
+	font-weight: bold;
+}
+
 .text1{
 	padding-top:1%;
 	padding-right: 10%;

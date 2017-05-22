@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Simon Says - JavaScript</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<script data-main="js/main" src="js/lib/require.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+			<div class="game-board">
+				<div class="simon">
+					<ul>
+						<li class="tile red" data-tile="1"></li>
+						<li class="tile blue" data-tile="2"></li>
+						<li class="tile yellow" data-tile="3"></li>
+						<li class="tile green" data-tile="4"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="game-info">
+				<h2>Round: <span data-round="0">0</span></h2>
+				<button data-action="start" >Start</button>
+				<p data-action="lose">Sorry, you lost after <span data-round="0"></span> rounds!</p>
+			</div>
+			<!-- <div class="game-options">
+				<h2>Game Options:</h2>
+				<input type="radio" name="mode" value="normal" checked>Normal<br>
+				<input type="radio" name="mode" value="sound-only">Sound Only<br>
+				<input type="radio" name="mode" value="light-only">Light Only<br>
+				<input type="radio" name="mode" value="free-board">Free board
+			</div> -->
+		<div data-action="sound"></div>
+	</div>
+</body>
+</html>

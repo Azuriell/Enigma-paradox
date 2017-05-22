@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Crypté</title>
+	<link rel="stylesheet" type="text/css" href="js/lib/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/txtcrypte.css">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center middle">
+			<section id="enigme" style="visibility : visible;">
+        		<div id="afficher"></div>
+        		<form action="#" method="post" accept-charset="utf-8">
+                	<input type="text" name="reponse" value="" id='texte' required>
+        		</form>
+        		<button onclick="return submitAnswer()">Inspecter</button>
+    		</section>
+    		<section id="fin" style="visibility : hidden">
+        		<p>You Win !</p>
+    		</section>
+    	</div>
+	</div>
+</div>
+
+<script>
+	var crypte  = [	
+		'Qr abaqhz hg qvrf pbafhynev',
+		'Gh qrqgxp xw glhv frqvxodul.', 				
+		'Ef opoevn vu ejft dpotvmbsj.',
+		'Txhp ghfxhudw glplwwhedw fdxvdwxv dgghqv.',
+		'Rvfn efdvfsbu ejnjuufcbu dbvtbuvt beefot.',
+		'Dhrz qrphreng qvzvggrong pnhfnghf nqqraf.',
+		'Mvduvptbn rvjdrvje dbfejcvt tvbf fujbn.',
+		'Oxfwxrvdp txlftxlg fdhglexv vxdh hwldp.',
+		'Yhpghbfnz dhvpdhvq pnrqvohf fhnr rgvnz.',
+
+		'81 117 101 109 32 100 101 99 117 101 114 97 116 32 100 105 109 105 116 116 101 98 97 116 32 99 97 117 115 97 116 117 115 32 97 100 100 101 110 115 46',
+		'76 117 99 116 117 111 115 97 109 32 113 117 105 99 113 117 105 100 32 99 97 101 100 105 98 117 115 32 115 117 97 101 32 101 116 105 97 109 46',
+		'68 101 32 110 111 110 100 117 109 32 117 116 32 100 105 101 115 32 99 111 110 115 117 108 97 114 105 46', 
+		
+
+		'--.- ..- . -- / -.. . -.-. ..- . .-. .- - / -.. .. -- .. - - . -... .- - / -.-. .- ..- ... .- - ..- ... / .- -.. -.. . -. ... .-.-.-',
+		'.-.. ..- -.-. - ..- --- ... .- -- / --.- ..- .. -.-. --.- ..- .. -.. / -.-. .- . -.. .. -... ..- ... / ... ..- .- . / . - .. .- -- .-.-.-',
+		'-.. . / -. --- -. -.. ..- -- / ..- - / -.. .. . ... / -.-. --- -. ... ..- .-.. .- .-. .. .-.-.- ',
+
+		'⠟ ⠥ ⠑ ⠍ ⠙ ⠑ ⠉ ⠥ ⠑ ⠗ ⠁ ⠞ ⠙ ⠊ ⠍ ⠊ ⠞ ⠞ ⠑ ⠃ ⠁ ⠞ ⠉ ⠁ ⠥ ⠎ ⠁ ⠞ ⠥ ⠎ ⠁ ⠙ ⠙ ⠑ ⠝ ⠎ ⠲',
+		'⠇ ⠥ ⠉ ⠞ ⠥ ⠕ ⠎ ⠁ ⠍ ⠟ ⠥ ⠊ ⠉ ⠟ ⠥ ⠊ ⠙ ⠉ ⠁ ⠑ ⠙ ⠊ ⠃ ⠥ ⠎ ⠎ ⠥ ⠁ ⠑ ⠑ ⠞ ⠊ ⠁ ⠍ ⠲',
+		'⠙ ⠑ ⠝ ⠕ ⠝ ⠙ ⠥ ⠍ ⠥ ⠞ ⠙ ⠊ ⠑ ⠎ ⠉ ⠕ ⠝ ⠎ ⠥ ⠇ ⠁ ⠗ ⠊ ⠲',
+
+
+		];
+
+	var answers = ['De nondum ut dies consulari.','Quem decuerat dimittebat causatus addens.','Luctuosam quicquid caedibus suae etiam.'];
+
+    document.getElementById("afficher").innerHTML = crypte[Math.floor(Math.random() * crypte.length)];
+    
+	var visuel1 = document.getElementById("enigme");
+    var visuel2 = document.getElementById("fin");
+        function submitAnswer(){
+            var txt = document.getElementById('texte').value;
+            if(txt == answers[0]){
+                alert("Well done.");
+                visuel1.style.visibility = "hidden";
+                visuel2.style.visibility = "visible";
+            }else if(txt == answers[1]){
+                alert("Well done.");
+                visuel1.style.visibility = "hidden";
+                visuel2.style.visibility = "visible";
+            }else if (txt == answers[2]){
+                alert("Well done.");
+                visuel1.style.visibility = "hidden";
+                visuel2.style.visibility = "visible";
+            } else {
+                alert("Try again.");
+            }
+        }
+</script>
+<script src="js/bootstrap.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Saymond says</title>
+	<style type="text/css">
+		table{
+			position: absolute;
+		    bottom: 30%;
+		    right: 32%;
+			border-collapse: collapse;
+		}
+		td{
+			padding: 20px;
+			border: 1px solid black; 
+		}
+		table a{
+			float: left;
+			font-size: 50px;
+			letter-spacing: 1px;
+			line-height: 14px;
+			min-width:60px;
+			padding: 60px 20px;
+			text-align: center;
+			text-decoration: none;
+			text-shadow: 1px 1px 0 #B4C6C6;
+			text-transform: uppercase;		
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><a id="bleu" style="color: ;">Blue</a></td>
+			<td><a id="rouge" style="color: ;">Red</a></td>
+		</tr>
+		<tr>
+			<td><a id="jaune" style="color: ;">Yellow</a></td>
+			<td><a id="vert" style="color: ;">Green</a></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		var couleur1 = document.getElementById("bleu");
+		var couleur2 = document.getElementById("rouge");
+		var couleur3 = document.getElementById("jaune");
+		var couleur4 = document.getElementById("vert");
+		var color = "";
+		var sequence = [];
+
+		function simonsays(){
+			var case1 = Math.round(Math.random() * 3);			
+
+			function colorised(){
+				if(case1 == 0){
+					color = "blue";
+				} else if(case1 == 1){
+					color = "red";
+				} else if (case1 == 2){
+					color = "yellow";			
+				} else if(case1 == 3){
+			    	color = "green"; 
+				}
+			}
+			colorised();
+			var case2 = Math.round(Math.random() * 3);
+
+			function word(){
+				var couleurhtml = "";
+
+				if(case2 == 0){
+			    	couleur1.style.color = color;
+			    	couleurhtml = couleur1;
+				} else if(case2 == 1){
+			    	couleur2.style.color = color;
+			    	couleurhtml = couleur2;
+				} else if (case2 == 2){
+			    	couleur3.style.color = color; 
+			    	couleurhtml = couleur3;
+				} else if(case2 == 3){
+			    	couleur4.style.color = color; 
+			    	couleurhtml = couleur4;
+				}	
+				return couleurhtml;
+			}
+			word();
+			sequence.push(word());
+		};
+	</script>
+</body>
+</html>
