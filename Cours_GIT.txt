@@ -9,10 +9,10 @@ Développer par Linus Torvalds en 2005
 Principe de Github : décentralisé/multi branches/ rapide&performant/sécurisé/Logiciel libre GNU v2
 
 Commandes pour commit un fichier dans git : 
-- git status
-- git add .
-- git commit -m ""
-- git log/ git log --oneline
+- git status (voir les dernière modification
+- git add . (ajouter les fichiers modifiés)
+- git commit -m "" (sauvegarder les dernière modifications + un commentaire descriptif)
+- git log/ git log --oneline 
 - git checkout id_commit/ git chekout id_commit nom_du_fichier/git checkout master (dernière version de code)
 - git remote add origin url 
 - git push -u origin "branche(master)" (envoyer ses modifications sur github)

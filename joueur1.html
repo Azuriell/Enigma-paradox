@@ -48,10 +48,10 @@
 			var num = Math.round(Math.random() * 1);
 			var enigme = document.getElementById('affichage');
 			// Ajout manuelle des différentes énigmes
-			if(num == 0 || num == 1){
+			if(num == 0){
 			  	enigme.src="txtcrypte.html";
-			} else {
-			  	enigme.src="";
+			} else if(num == 1){
+			  	enigme.src="Simon_says(2).html";
 			}
 		}
 		// Chronomètre + button

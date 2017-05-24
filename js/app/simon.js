@@ -118,6 +118,7 @@ define(['jquery'], function($) {
 					that.activateSimonBoard();
 				}
 			}, 600);
+			console.log(sequence);
 		},
 
 		lightUp: function(tile) {

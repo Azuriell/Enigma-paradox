@@ -14,13 +14,13 @@
 				<li>
 					<a onclick="visibilite(this.id)" id="first" class="current">Clé 1</a>
 					<ul class="subs">
-						<li><a onclick="visibilite()" id="first"><img src="images/Clé_2 (2).png"></a></li>
+						<li><a onclick="visibilite()" id="first"><img src="images/Clé_1 (2).png"></a></li>
 					</ul>
 				</li>
 				<li>
 					<a onclick="visibilite(this.id)" id="second" class="current">Clé 2</a>
 					<ul class="subs">
-						<li><a onclick="visibilite()" id="second"><img src="images/Clé_1 (2).png"></a></li>
+						<li><a onclick="visibilite()" id="second"><img src="images/Clé_2_hori (2).png"></a></li>
 					</ul>
 				</li>
 				<li>
@@ -60,9 +60,9 @@
 		function visibilite(id_button){
 			var image = document.getElementById('cle');
 			if(id_button == "first"){
-		  		image.src="images/Clé_2.png";
-			} else if(id_button == "second"){
 		  		image.src="images/Clé_1.png";
+			} else if(id_button == "second"){
+		  		image.src="images/Clé_2_hori.png";
 			} else if(id_button == "third"){
 		  		image.src="images/preview-bomb-defusal-manual-v1r2-frv3-11.jpg";
 			}

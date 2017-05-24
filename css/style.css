@@ -138,11 +138,3 @@ p[data-action="lose"] {
 .hoverable:hover {
 	cursor: pointer;
 }
-
-footer {
-	position: absolute;
-	bottom: 20px;
-	width: 540px;
-	clear: both;
-	text-align: center;
-}
