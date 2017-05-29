@@ -20,5 +20,5 @@ Vous incarnez Sherlock Holmes et Watson, votre but est de résoudre le plus d'é
 
 ## TECHNOLOGIES
 
-Jeu développé en **Javascript**, avec **Phaser** comme outil supplémentaire.
+Jeu développé en **Javascript**.
 Le _board_ des meilleurs scores est enregistré sur un serveur web standard, avec **PHP** et une base de données **mySQL**
