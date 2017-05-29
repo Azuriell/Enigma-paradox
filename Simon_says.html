@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Saymond says</title>
 	<style type="text/css">
+		body{
+			background-color: #fff;
+		}
+
 		table{
 			position: absolute;
-		    bottom: 30%;
-		    right: 32%;
+		    bottom: 23%;
+		    right: 30%;
 			border-collapse: collapse;
 		}
 		td{
@@ -49,10 +52,8 @@
 			color : "",
 			couleurhtml : ""
 		};
-
 		function simonsays(){
 			var case1 = Math.round(Math.random() * 3);			
-
 			function colorised(){
 				if(case1 == 0){
 					this.color = "blue";
@@ -93,7 +94,6 @@
 				couleur4.style.color = "";
 			}, 600);
 		};
-
 		function keyPress(event){
 			if(this.couleurhtml == couleur1){
 				if(this.color == "blue"){

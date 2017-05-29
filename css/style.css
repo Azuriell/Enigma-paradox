@@ -1,6 +1,6 @@
 body {
 	font-family: Arial, serif;
-	color: #333;
+	color: #fff;
 	-webkit-user-select: none; /* Chrome/Safari */        
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+ */
@@ -8,13 +8,12 @@ body {
 	user-select: none;
 }
 
-h1 {
-	margin: 1em 0 2em;
-	text-align: center;
-}
-
 ul {
 	list-style: none;
+}
+
+li{
+	border: 1px solid #000000;
 }
 
 ul, li {
@@ -22,25 +21,9 @@ ul, li {
 	margin: 0;
 }
 
-p[data-action="lose"] {
-	display: none;
-}
-
-.active {
-	opacity: 1 !important;
-}
-
-.clearfix {
-	width: 100%;
-	clear: both;
-}
-
 .wrapper {
 	width: 540px;
 	margin: 0 auto;
-}
-.container {
-	width: 305px;
 }
 
 .simon {
@@ -67,10 +50,6 @@ p[data-action="lose"] {
 	transition: opacity 250ms ease;
 }
 
-.tile.lit {
-	opacity: 1;
-}
-
 .red, .blue, .yellow, .green {
 	height: 290px;
 	-webkit-border-radius: 150px 150px 150px 150px;
@@ -84,57 +63,25 @@ p[data-action="lose"] {
 }
 
 .red {
-	background: #FF5643;
+	background: black;
 	clip: rect(0px, 300px, 150px, 150px);
 	width: 296px;
 }
 
 .blue {
-	background: dodgerblue;
+	background: black;
 	clip: rect(0px, 150px, 150px, 0px);
 	width: 300px;
 }
 
 .yellow {
-	background: #FEEF33;
+	background: black;
 	clip: rect(150px, 150px, 300px, 0px);
 	width: 300px;
 }
 
 .green {
-	background: #BEDE15;
+	background: black;
 	clip: rect(150px,300px, 300px, 150px);
 	width: 296px;
-}
-
-.game-info {
-	margin-top: 90px;
-}
-
-.game-info button {
-	width: 5em;
-	box-sizing: border-box;
-	font-size: 1.4em;
-	-webkit-border-radius: 10px 10px 10px 10px;
-	border-radius: 10px 10px 10px 10px;
-	background: #6DABE8;
-	border: none;
-	padding: 0.3em 0.6em;
-}
-
-.game-info button:hover {
-	background: #78BCFF;
-}
-
-.game-options h2 {
-	margin-top: 30px;
-	margin-bottom: 0;
-}
-
-.game-options input[type="radio"] {
-	margin-right: 10px;
-}
-
-.hoverable:hover {
-	cursor: pointer;
 }

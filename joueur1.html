@@ -29,6 +29,7 @@
 </head>
 <body>
 	<section>
+		<audio id="audio" src="Bip_sonore.mp3"></audio>
 		<div id="overlay">
 			<!-- Cadre en fond -->
 		  	<img id="image" src="images/cadre.png">
@@ -36,11 +37,17 @@
 		  	<input type="button" id="bouton" value="Démarrer la partie !" onclick="startTimer(), crea()" style="visibility : visible;"/>
 
 			<!-- Chronomètre -->
-			<div id="temps" style="visibility : hidden;">Time :<span id="timer" ></span></div>
+			<div id="temps" style="visibility : hidden;">Time : <span id="timer" ></span></div>
 		</div>
 		<iframe id="affichage" style="visibility : hidden;" src="" width="90%" height=""></iframe>
 	</section>
 	<script type="text/javascript">
+		var element1 = document.getElementById("bouton");
+		var element2 = document.getElementById("temps");
+		var element3 = document.getElementById("affichage");	
+		var song = document.getElementById("audio");	
+
+
 		// Changement aléatoire de l'énigme au centre
 		function crea(){
 			var hauteur = document.getElementById("affichage");
@@ -57,23 +64,50 @@
 		// Chronomètre + button
 		document.getElementById('timer').innerHTML = 02 + ":" + 30;
 
-		var element1 = document.getElementById("bouton");
-		var element2 = document.getElementById("temps");
-		var element3 = document.getElementById("affichage");
 		function startTimer() {
 		    var presentTime = document.getElementById('timer').innerHTML;
 		    var timeArray = presentTime.split(/[:]+/);
 		    var m = timeArray[0];
 		    var s = checkSecond((timeArray[1] - 1));
+
 		    if(s==59){m=m-1}
 		    if(m<0){
 		    	stop.startTimer();
 		    	alert('timer completed')
 		    }
 
+		    // Effet sonore sur le chrono
+		    if(m >= 2){
+			    function audioPlay1(){
+					setTimeout(function(){audioPlay1();}, 1000);
+					song.play();
+				}
+				audioPlay1();
+				console.log("A");
+			} 
+			else if(m == 1){
+				function audioPlay2(){
+					setTimeout(function(){audioPlay2();}, 500);
+					song.play();
+				}
+				audioPlay2();
+				console.log("B");
+			} 
+			else if (m < 1){
+				function audioPlay3(){
+					setTimeout(function(){audioPlay3();}, 300);
+					song.play();
+				}
+				audioPlay3();
+				console.log("C");
+			}
+		   	console.log(m);
+			console.log(s); 
+
 		    document.getElementById('timer').innerHTML =
 		    	m + ":" + s;
 		    setTimeout(startTimer, 1000);
+
 		    // Changement propiété css du bouton et du timer
 		    element1.style.visibility = "hidden";
 		    element2.style.visibility = "visible";
@@ -81,10 +115,11 @@
 		}
 
 		function checkSecond(sec) {
-		    if (sec  < 10 && sec >= 0) {sec = "0" + sec}; // ajotue zero devant les nombres < 10
+		    if (sec  < 10 && sec >= 0) {sec = "0" + sec}; // ajoute zero devant les nombres < 10
 		    if (sec < 0) {sec = "59"};
 		    return sec;
 		}
+
 	</script>
 </body>
 </html>

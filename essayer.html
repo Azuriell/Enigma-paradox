@@ -5,121 +5,126 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <title>Simon Says - JavaScript</title>
   <style type="text/css">
+    #red: #CF4444;
+    #lightRed: lighten(#red, 10%);
+    #yellow: #EBBB54;
+    #lightYellow: lighten(#yellow, 10%);
+    #green: #94BA65;
+    #lightGreen: lighten(#green, 10%);
+    #blue: #2790B0;
+    #lightBlue: lighten(#blue, 10%);
+    #darkGrey: #30303f;
+    #lightGrey: #dfdfef;
+    #black: #122125;
+
+    @import url(https://fonts.googleapis.com/css?family=Lato:300);
+
     body {
-      font-family: Arial, serif;
-      color: #333;
-      user-select: none;
+      font-family: lato;
+      background: #lightGrey;;
     }
 
-    ul {
-      list-style: none;
+    #game-board {
+      margin: auto;
+      width: 300px;
+      height: 300px;
+      border: 3px solid #black;
+      border-radius: 50%;
     }
 
-    ul, li {
-      padding: 0;
-      margin: 0;
+    #controls {
+      text-align: center;
+      margin-top: -50px;
+      button {
+        margin: 0 5px;
+        width: 75px;
+        border: none;
+        background: #black;
+        color: #ccc;
+        font-family: lato;
+        font-size: 15px;
+        border-radius: 20px;
+        &:hover {
+          background: #darkGrey;
+        }
+      }
     }
 
-    .active {
-      opacity: 1 !important;
+    .btn {
+      width: 150px;
+      height: 150px;
+      border: 3px solid #black;
     }
 
-    .clearfix {
-      width: 100%;
-      clear: both;
+    #red {
+      border-top-left-radius: 100%;
+      background: #red;
+      color: #red;
+      &.lighten {
+        background: #lightRed;
+        color: #lightRed;
+      }
     }
 
-    .wrapper {
-      width: 540px;
-      margin: 0 auto;
-    }
-    .container {
-      width: 305px;
+    #yellow {
+      border-top-right-radius: 100%;
+      background: #yellow;
+      color: #yellow;
+      &.lighten {
+        background: #lightYellow;
+        color: #lightYellow
+      }
     }
 
-    .simon {
-      background: #fff;
+    #green {
+      border-bottom-left-radius: 100%;
+      background: #green;
+      color: #green;
+      &.lighten {
+        background: #lightGreen;
+        color: #lightGreen;
+      }
+    }
+
+    #blue {
+      border-bottom-right-radius: 100%;
+      background: #blue;
+      color: #blue;
+      &.lighten {
+        background: #lightBlue;
+        color: #lightBlue;
+      }
+    }
+
+    #middle {
       position: relative;
-      float: left;
-      margin-right: 3em;  
-      width: 302px;
-      height: 295px;
-      -webkit-border-radius: 150px 150px 150px 150px;
-      border-radius: 150px 150px 150px 150px;
-        -moz-box-shadow: 2px 1px 12px #aaa;
-        -webkit-box-shadow: 2px 1px 12px #aaa;
-        -o-box-shadow: 2px 1px 12px #aaa;
-        box-shadow: 2px 1px 12px #aaa;
+      top: -193px;
+      background: #black;
+      color: #lightGrey;
+      height: 75px;
+      width: 75px;
+      text-align: center;
+      padding: 1px;
+      margin: auto;
+      border-radius: 50%;
+      p {
+        font-size: 30px;
+        line-height: 0;
+        margin-top: 50%;
+      }
     }
 
-    .tile {
-      opacity: 0.6;
-      -webkit-transition: opacity 250ms ease;
-      -moz-transition: opacity 250ms ease;
-      -ms-transition: opacity 250ms ease;
-      -o-transition: opacity 250ms ease;
-      transition: opacity 250ms ease;
-    }
-
-    .tile.lit {
-      opacity: 1;
-    }
-
-    .red, .blue, .yellow, .green {
-      height: 290px;
-      -webkit-border-radius: 150px 150px 150px 150px;
-      border-radius: 150px 150px 150px 150px;
-      position: absolute;
-      text-indent: 10000px;
-    }
-
-    .red:hover, .blue:hover, .yellow:hover, .green:hover {
-      border: 2px solid black
-    }
-
-    .red {
-      background: #FF5643;
-      clip: rect(0px, 300px, 150px, 150px);
-      width: 296px;
-    }
-
-    .blue {
-      background: dodgerblue;
-      clip: rect(0px, 150px, 150px, 0px);
-      width: 300px;
-    }
-
-    .yellow {
-      background: #FEEF33;
-      clip: rect(150px, 150px, 300px, 0px);
-      width: 300px;
-    }
-
-    .green {
-      background: #BEDE15;
-      clip: rect(150px,300px, 300px, 150px);
-      width: 296px;
-    }
-
-    .hoverable:hover {
-      cursor: pointer;
-    }
   </style>
   <script data-main="js/main" src="js/lib/require.min.js"></script>
 </head>
 <body>
-  <div class="wrapper">
-      <div class="game-board">
-        <div class="simon">
-          <ul>
-            <li class="tile red" data-tile="1"></li>
-            <li class="tile blue" data-tile="2"></li>
-            <li class="tile yellow" data-tile="3"></li>
-            <li class="tile green" data-tile="4"></li>
-          </ul>
-        </div>
-      </div>
-    <div data-action="sound"></div>
+  <div id="game-board">
+    <button id="red" class="btn"></button><button id="yellow" class="btn"></button><button id="green" class="btn"></button><button id="blue" class="btn"></button>
+  </div>
+  <div id="middle"><p id="counter">0</p></div>
+  <div id="controls">
+    <button id="start">Start</button>
+    <button id="reset">Reset</button>
   </div>
 </body>
 </html>
