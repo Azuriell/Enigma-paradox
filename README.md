@@ -8,6 +8,14 @@ Vous incarnez Sherlock Holmes et Watson, votre but est de résoudre le plus d'é
 
 ![wireframe](https://img4.hostingpics.net/thumbs/mini_801136201705151053120.jpg "wireframe 1")
 
+### Rendu in game :
+
+![wireframe](https://img15.hostingpics.net/thumbs/mini_154667Rendu1.png "wireframe 1")
+![wireframe](https://img15.hostingpics.net/thumbs/mini_910824Rendu2.png "wireframe 1")
+![wireframe](https://img15.hostingpics.net/thumbs/mini_201877Rendu3.png "wireframe 1")
+![wireframe](https://img15.hostingpics.net/thumbs/mini_970315Rendu4.png "wireframe 1")
+
+
 ## REGLES
 
 * L'utilisateur doit créer une partie en local avec un ami et choisir son rôle : Sherlock (le détective) ou Watson(l'assitant), pour résoudre des énigmes à deux.
@@ -22,3 +30,11 @@ Vous incarnez Sherlock Holmes et Watson, votre but est de résoudre le plus d'é
 
 Jeu développé en **Javascript**.
 Le _board_ des meilleurs scores est enregistré sur un serveur web standard, avec **PHP** et une base de données **mySQL**
+
+## DATA
+
+* 1 ère énigmes : Décryptage de texte (5 clé de decryptage).
+
+* 2 ème énigmes : Simon says à deux (Ajout de règle différente pour pouvoir faire l'énigme à deux).
+
+* 3 ème énigmes : Mini jeu d'asteroide invisible (Watson va devoir indiquer la position des asteroides pour que Sherlock les détruisent "Ca ne colle pas au thème, a modifier !").
